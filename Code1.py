@@ -1,4 +1,4 @@
-##First project: Basic calculator project
+###First project: Basic calculator project
 
 words = ['cat', 'window', 'defenestrate']
 
