@@ -1,63 +1,160 @@
-ma=0
-#My firrst comment to check the changes made by Github
-def sanitize(time_string):
-    global ma
-    ma+=1
-    print(ma)
-    if '-' in time_string:
-        splitter = '-'
-    elif ':' in time_string:
-        splitter = ':'
-    else:
-        return(time_string)
-    (mins, secs) = time_string.split(splitter)
-    return(mins + '.' + secs)
+First project: Basic calculator project
 
-with open('james.txt') as jaf:
-    data = jaf.readline()
-james = data.strip().split(',')
+words = ['cat', 'window', 'defenestrate']
 
-##with open('julie.txt') as juf:
-##    data = juf.readline()
-##julie = data.strip().split(',')
-##
-##with open('mikey.txt') as mif:
-##    data = mif.readline()
-##mikey = data.strip().split(',')
-##
-##with open('sarah.txt') as saf:
-##    data = saf.readline()
-##sarah = data.strip().split(',')
+vec = [[1,2,3], [4,5,6], [7,8,9]]
 
-james = sorted([sanitize(t) for t in (james)])
-##julie = sorted([sanitize(t) for t in julie])
-##mikey = sorted([sanitize(t) for t in mikey])
-##sarah = sorted([sanitize(t) for t in sarah])
+matrix = [[11, 32, 13, 24], [15, 6, 67, 78], [49, 3410, 2311, 1212],]
 
-unique_james = []
-for each_t in james:
-    if each_t not in unique_james:
-        unique_james.append(each_t)
-print(unique_james[0:3])
-##print(james)
+# Transpose output  [[1, 5, 9], [2, 6, 10], [3, 7, 11], [4, 8, 12]]
 
-##print(james[0:3])
+ 
 
+#[[0][0], [1][0], [2][0]], [[0][1], [1][1], [2][1]]
 
-##unique_julie = []
-##for each_t in julie:
-##    if each_t not in unique_julie:
-##        unique_julie.append(each_t)
-##print(unique_julie[0:3])
-##
-##unique_mikey = []
-##for each_t in mikey:
-##    if each_t not in unique_mikey:
-##        unique_mikey.append(each_t)
-##print(unique_mikey[0:3])
-##
-##unique_sarah = []
-##for each_t in sarah:
-##    if each_t not in unique_sarah:
-##        unique_sarah.append(each_t)
-##print(unique_sarah[0:3])
+'''
+
+k=[]
+
+ 
+
+new_matrix=[]
+
+new_row=[]
+
+ 
+
+for row in matrix:
+
+    for item in row:
+
+        new_row.append(item)
+
+    #print(r'here it is', new_row)
+
+    new_matrix.append(new_row)
+
+    new_row=[]
+
+print(new_matrix)
+
+# Python code to demonstrate the working of
+
+# zip()
+
+ 
+
+# initializing lists
+
+name = [ "Manjeet", "Nikhil", "Shambhavi", "Astha" ]
+
+roll_no = [ 4, 1, 3, 2 ]
+
+marks = [ 40, 50, 60, 70 ]
+
+ 
+
+# using zip() to map values
+
+mapped = list(zip(name, roll_no, marks))
+
+ 
+
+# converting values to print as set
+
+#mapped = set(mapped)
+
+ 
+
+# printing resultant values
+
+#print ("The zipped result is : ",end="")
+
+print (mapped)
+
+  ''' 
+
+ 
+
+ 
+
+def add(x,y):
+
+    return x+y
+
+ 
+
+def sub(x,y):
+
+    return x-y 
+
+ 
+
+def mul(x,y):
+
+    return x*y
+
+   
+
+def div(x,y):
+
+    return x/y
+
+ 
+
+s='y'
+
+while(s=='y'):
+
+    t = int(input(''' Choose any operation as listed below
+
+            to add press 1
+
+            to sub press 2
+
+            to mul press 3
+
+            to div press 4: ''' ))
+
+    if t<=0 or t>4:
+
+        print("incorrect value so breaking out")
+
+        break
+
+       
+
+    print("Enter the 2 values")
+
+   
+
+    n = int(input("1st no: "))
+
+    m = int(input("2nd no: "))
+
+   
+
+    #print(type(n),type(m))
+
+    if t ==1:
+
+        value =add(n,m)
+
+    elif t ==2:
+
+        value =sub(n,m)
+
+    elif t == 3:
+
+        value =mul(n,m)
+
+    elif t == 4:
+
+        value =div(n,m)
+
+ 
+
+    print("The answer is", value)
+
+    s = input("DO you want to continue?: ")
+ 
